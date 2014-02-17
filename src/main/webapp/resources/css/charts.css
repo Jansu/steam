@@ -1,0 +1,25 @@
+
+svg {
+  font-size: 10px;
+  shape-rendering: crispEdges;
+}
+
+.day {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: .1;
+}
+
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.goldenFill {
+	fill: linear-gradient(120deg, rgba(155,120,31,1) 0%,rgba(255,233,196,1) 9%,rgba(196,158,62,1) 10%,rgba(248,181,0,1) 15%,rgba(252,234,187,1) 39%,rgba(248,181,0,1) 59%,rgba(255,249,216,1) 62%,rgba(204,160,48,1) 85%,rgba(248,181,0,1) 96%); /* W3C */
+}
+
+.white {
+	fill: #fff;
+}

@@ -1,0 +1,513 @@
+body, ul, div, h1, h2, h3, h4, h5, h6, a {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+/* 	background-color: #444; */	
+	background: linear-gradient(45deg, rgba(40,40,40,1) 0%, rgba(80,80,80,1) 100%); 
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none; 
+	color: #FFF;
+/* 	color: #3C3; */
+}
+
+a:hover {
+	text-decoration: underline; 
+}
+
+ul {
+	list-style: none;
+}
+
+.hide {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.inlineTable {
+	display: inline-table;
+}
+
+.head {
+	z-index: 1000;
+	position: fixed;
+	width: 100%;
+	margin: auto;
+	background-color: #000;
+	border-bottom: 2px solid #FFF;
+	z-index: 200;
+}
+
+.content {
+	width: 90%;
+	margin: auto;
+	padding: 80px 0 0 0;
+}
+
+.navTitel {
+	margin: 0 0 0 10px;
+	padding: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.flyout {
+	position: relative;
+	height: 100%;
+}
+
+.outflyerContainer {
+	position: absolute;
+	margin: 10px 0 10px 0;
+	background-color: #000;
+	border: 2px solid #FFF;
+	border-top: none;
+	width: 150%; 
+}
+
+.outflyer {
+	border-top: 1px dotted #FFF;
+	padding: 5px 5px 5px 15px;	
+}
+
+.outflyer:hover {
+	background-color: #444;
+}
+
+.outflyer a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.filterContainer {
+	position: absolute;
+	padding: 10px;
+	right: 10px;
+	top: 10px; 
+	height: 100%;
+}
+
+.filterContainer div{
+	margin: 0 0 0 15px;
+	display: inline-table;
+}	
+
+.search {
+}
+
+.sorter {
+}
+
+.sorterTitle {
+}
+
+.outflyerContainer.sortOptionContainer {
+	right: 0;
+	margin: 16px 0 0 0;
+	width: 250px;
+}
+
+.sortOption {
+	list-style: none;
+	padding: 0 5px;
+	z-index: 220;
+}
+
+.gameList {
+	vertical-align: top;
+	text-align: center;
+}
+
+.game {
+	display: inline-table;
+	margin: 15px;
+	padding: 15px 0;
+	background-color: #000;
+	position: relative;
+	width: 184px;
+	heigth: 69px;
+	border: 4px solid;
+	border-radius: 20px;
+/* 	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(1,255,0,0.65) 100%); FF3.6+ */
+/* 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(1,255,0,0.65))); Chrome,Safari4+ */
+/* 	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(1,255,0,0.65) 100%); Chrome10+,Safari5.1+ */
+/* 	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(1,255,0,0.65) 100%); Opera 11.10+ */
+/* 	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(1,255,0,0.65) 100%); IE10+ */
+/* 	background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(1,255,0,0.65) 100%); W3C */
+/* 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a601ff00',GradientType=0 ); IE6-9 */
+	
+}
+
+.gameTitle {
+	background-color: #000;
+	height: 18px;
+	width: 184px;
+	overflow: hidden;
+	font-weight: bold;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.controls {
+	display: none;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+
+.controls .control {
+	width: 22%;
+	margin: auto;
+	display: inline-block;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.controls .control:hover {
+	background-color: rgba(50,200,50,0.8);
+}
+
+.button {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 20px;
+}
+
+.playButton {
+	background-image:url('/web/resources/images/play.png');
+}
+
+.shopButton {
+	background-image:url('/web/resources/images/shop.png');
+}
+
+.updateButton {
+	background-image:url('/web/resources/images/update.png');
+}
+
+.beatenButton {
+	background-image:url('/web/resources/images/beaten.png');
+}
+
+.noAchievPercBar {
+	width: 100%;
+	height: 11px;
+	background-color: #000;
+}
+
+.hoursPlayed {
+	right: 5px;
+	position: absolute;
+	z-index: 110;
+	bottom: -1px;
+}
+
+.achievStats {
+	margin-left: 5px;
+	z-index: 110;
+	position: absolute;
+	bottom: -1px;
+}
+
+.bottomBar {
+	position: relative;
+	z-index: 90;
+/* 	width: 100%; */
+	height: 11px;
+	font-size: 10px;
+	text-align: left;
+	background-color: #000;
+	overflow: hidden;
+}
+
+.beaten .achievPercBar {
+	background-image:url('/web/resources/images/achievPercBGblack.png');
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: right;
+	color: #000;
+}
+
+.unplayed img {
+	opacity:0.9;
+}
+
+.played {
+	border-color: #FFF;
+/* 	border: 2px groove #FFF; */
+}
+
+.beaten {
+	border-color: #000;
+}
+
+.game.unplayed {
+	border-color: #CCC;
+}
+
+.game img {
+/* 	border: 1px solid; */
+	border-left: none;
+	border-right: none;
+	border-color: inherit;
+}
+
+.game.beaten, .achievement.beaten, .golden {
+	background: linear-gradient(120deg, rgba(155,120,31,1) 0%,rgba(255,233,196,1) 9%,rgba(196,158,62,1) 10%,rgba(248,181,0,1) 15%,rgba(252,234,187,1) 39%,rgba(248,181,0,1) 59%,rgba(255,249,216,1) 62%,rgba(204,160,48,1) 85%,rgba(248,181,0,1) 96%); /* W3C */
+}
+
+
+/******************
+	List Layout
+******************/
+
+body.listLayout .game {
+	display: block;
+	width: inherit;
+}
+
+body.listLayout .controls{
+	display: inherit;
+}
+
+
+/******************
+	Achievements
+******************/
+.achievList {
+	text-align: center;
+	max-width: 50%;
+	margin: auto; 
+}
+
+.achievementContainer {
+	position: relative;
+}
+
+.achievement {
+	position: relative;
+	background-color: #000;
+	margin: 10px 10px 10px 200px;
+	border: 4px solid #FFF;
+	border-radius: 20px;
+}
+
+.achievement.unlocked {
+	border-color: #000;
+}
+
+.achievement .title{
+	font-weight: bold;
+}
+
+.achievement img {
+	position: absolute;
+	top: 15px;
+	left: 0px;
+}
+
+.achievement .achievementData {
+	position: relative;
+	background-color: #000;
+	margin: 15px 0 15px 64px;
+	color: #FFF;
+	padding: 5px 50px 5px 5px;
+	height: 54px;
+}
+
+.achievement .achievementData div {
+	z-index: 110;
+}
+
+.achievement .globalPercFiller {
+	position: absolute;
+	background-color: rgba(255,255,255,0.2);
+	height: 100%;
+	padding: 0;
+	margin: -5px;
+	z-index: 100;
+}
+	
+.achievement.unlocked .achievementData {
+	background-color: #000;
+	margin-bottom: 0;
+}
+
+.achievement .achievementData .desc {
+	font-size: 0.9em;
+}
+	
+.achievement .globalPerc {
+	position: absolute;
+	top: 35%;
+	right: 10px;
+/* 	background: linear-gradient(180deg, rgba(8,8,0,1) 0%,rgba(248,181,0,1) 15%,rgba(252,234,187,1) 29%,rgba(248,181,0,0.9) 59%,rgba(204,160,48,1) 85%,rgba(8,8,0,1) 100%); */
+}
+
+.achievement .unlockedTime {
+	color: #000;
+}
+
+.achievementContainer .gameContainer {
+	position: absolute;
+	left: 0;
+}
+
+.achievementContainer .gameContainer .game {
+	margin: 0;
+}
+
+.achievementContainer .gameContainer .gameTitle,
+.achievementContainer .gameContainer .bottomBar {
+	display: none;
+}
+
+.achievementContainer .gameContainer .controls {
+	top: 30%;
+}
+
+.achievementContainer .gameContainer .game img {
+	border: none;
+}
+
+
+
+/******************
+	Game Detail
+******************/
+.gameDetail {
+	text-align: center;
+}
+
+.gameDetail .game {
+	width: 30%;
+}
+
+.gameDetail .game img {
+	border: none;
+	position: absolute;
+	top: 15px;
+	left: 0;
+}
+
+.gameDetail .gameTitle {
+	width: inherit;
+}
+
+.gameDetail .bottomBar, 
+.gameDetail .gameTitle {
+	margin-left: 184px;
+	font-size: 1em;
+	height: 23px;
+	display: block;
+}
+
+.gameDetail .beaten .achievPercBar {
+	background-image: none;
+}
+
+.gameDetail .controls {
+	width: 184px;
+	top: 30%;
+}
+
+.gameDetail .achievement {
+	margin: 10px;
+}
+
+
+/******************
+	Time Line
+******************/
+.timeline {
+	position: relative;
+}
+
+.timeline .gameContainer .gameTitle,
+.timeline .gameContainer .bottomBar {
+	display: none;
+}
+
+.timeline .gameContainer {
+	position: absolute;
+	left: 0;
+}
+
+.timeline .gameContainer .game {
+	margin: 0;
+}
+
+.timeline .gameContainer .controls {
+	top: 30%;
+}
+
+.timeline.achievList {
+/* 	max-width: 60%; */
+}
+
+.timeline .achievsContainer {
+/* 	max-width: 50%; */
+	margin: auto;
+	position: relative;
+}
+
+.timeline .date {
+	background-color: #000;
+	padding: 10px;
+	margin: 30px -10px 20px -20px;
+	border: 4px solid #000;
+	border-radius: 20px;
+	color: #000;
+}
+	
+.timeline.compact .achievement {
+	display: inline-table;
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+}
+
+.timeline.compact .achievement img {
+	position: relative;
+	top: 0;
+}
+	
+.timeline.compact .achievement .unlockedTime,
+.timeline.compact .achievement .achievementData {
+	display: none;
+}
+
+.timeline.compact .achievsContainer {
+	padding-left: 200px;
+}
+
+.timeline.compact .section {
+	margin: 0 0 20px 0;
+	padding: 15px 10px;
+	border: 4px solid #FFF;
+	border-radius: 20px;
+	background-color: #000;
+/* 	background: linear-gradient(45deg, rgba(20,20,20,1) 0%, rgba(60,60,60,1) 100%);  */
+} 
+
+.timeline.compact .game {
+	top: -19px;
+}
